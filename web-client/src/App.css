@@ -1,0 +1,133 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-container {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titulo-left {
+  font-size: xx-large;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.form-peliculas {
+  min-height: 400px;
+  width: 70%;
+  background-color: #2f2f2f;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.textbox label {
+  margin-bottom: 4px;
+}
+
+.textbox input {
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: #545454;
+  padding: 2px;
+  padding-left: 4px;
+  color: #fff;
+  font-size: 14px;
+}
+
+#reseña {
+  height: 120px;
+}
+
+button {
+  margin-top: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-weight: 600;
+  font-size: medium;
+  transition: 200ms ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.right-container {
+  width: 65%;
+  background-color: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titulo-right {
+  font-size: xx-large;
+  font-weight: 600;
+  margin: 0;
+  color: #202020;
+  margin-bottom: 10px;
+}
+
+.lista-container {
+  background-color: #cdcdcd;
+  height: 60%;
+  width: 75%;
+  padding: 40px;
+  margin: 0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lista-peliculas {
+  background-color: #cdcdcd;
+  list-style-type: none;
+  padding: 40px;
+  margin: 0;
+  border-radius: 6px;
+  color: #202020;
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.item-pelicula {
+  background-color: #bfbfbf;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.item-pelicula .titulo-pelicula {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item-pelicula .reseña-pelicula {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
