@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  couchdb-container:
+    image: couchdb:3.2.3
+    ports:
+      - "5984:5984"
+    environment:
+      - COUCHDB_USER: imalautiseba
+      - COUCHDB_PASSWORD: imalautiseba
+    volumes:
+      - ./couchdb-data:/opt/couchdb/data
+    #restart: always
+
+  node-server-container:
+    build: ./node-server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - couchdb-container
+    links:
+      - couchdb-container
+
+  web-client-container:
+    build: ./web-client
+    ports:
+      - "5173:5173"
+    depends_on:
+      - node-server-container
+    links:
+      - node-server-container
