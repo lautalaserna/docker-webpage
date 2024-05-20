@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const fetchPeliculas = () => {
     fetch('http://localhost:3000/peliculas')
       .then(response => response.json())
-      .then((data: Pelicula[]) => setPeliculas(data))
+      .then((data: Pelicula[]) => setPeliculas(data.reverse()))
       .catch(error => console.error('Error fetching data:', error));
   };
 
