@@ -4,13 +4,13 @@ services:
   couchdb-container:
     image: couchdb:3.2.3
     ports:
-      - "5984:5984"
+      - "5985:5984"
     environment:
-      - COUCHDB_USER: imalautiseba
-      - COUCHDB_PASSWORD: imalautiseba
+      - COUCHDB_USER=imalautiseba
+      - COUCHDB_PASSWORD=imalautiseba
     volumes:
       - ./couchdb-data:/opt/couchdb/data
-    #restart: always
+    restart: always
 
   node-server-container:
     build: ./node-server
