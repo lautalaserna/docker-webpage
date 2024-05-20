@@ -111,6 +111,7 @@ button:hover {
   color: #202020;
   max-height: 350px;
   overflow-y: auto;
+  width: 90%;
 }
 
 .item-pelicula {
